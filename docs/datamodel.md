@@ -1,34 +1,15 @@
-# Forslag til datamodel
+# Datamodel
 
-Dette er et planlægningsforslag, ikke en oprettet database eller et SQL-schema.
+Se det samlede [ER-diagram](er-diagram.md) med felter, typer, relationer og regler. Dokumentationen beskriver eksamensversionen uden login; den er ikke et implementeret SQL-schema.
 
-## Ejendomsprojekter
+## Tabeller
 
-| Felt | Foreslået type | Formål |
-| --- | --- | --- |
-| id | UUID | Projektets identitet |
-| title | Tekst | Navn på projektet |
-| address | Tekst | Adresse |
-| latitude / longitude | Decimaltal | Placering på kortet |
-| description | Tekst | Projektbeskrivelse |
-| investment_amount_dkk | Decimal | Samlet investeringsbeløb |
-| annual_return_min_pct / annual_return_max_pct | Decimal | Estimeret årligt afkast eller interval |
-| total_slots | Heltal | Samlede investorpladser |
-| occupied_slots | Heltal | Optagede investorpladser |
-| updated_at | Tidsstempel | Seneste ændring |
+- **EJENDOM:** Projektoplysninger, koordinater, samlet investeringsbeløb, estimeret afkast og samlede/optagede investorpladser. Ledige pladser beregnes.
+- **EJENDOMSMEDIE:** Billeder og plantegninger med reference til ejendommen og filens placering i Supabase Storage.
+- **INTERESSETILKENDEGIVELSE:** Reference til ejendommen, obligatorisk navn og e-mail, valgfrit telefonnummer, behandlingsstatus og separate mailstatusfelter for investor og JM.
 
-Ledige pladser beregnes og lagres ikke særskilt. Optagede pladser skal ligge mellem nul og det samlede antal. Minimumsafkast må ikke overstige maksimumsafkast.
-
-## Projektmedier
-
-Forslag: separat tabel med `id`, `project_id`, `type` (foto eller plantegning), `storage_path`, `alt_text` og `sort_order`. Et projekt kan have flere medier. Selve filerne kan ligge i Supabase Storage.
-
-## Interessetilkendegivelser
-
-Forslag: separat tabel med `id`, `project_id`, `name`, `email`, `created_at` og eventuel leveringsstatus. Et projekt kan have flere interessetilkendegivelser.
-
-Interesse er ikke en reservation. Kontaktoplysninger skal ikke kunne læses af andre appbrugere. Teamet aftaler opbevaring og sletning samt håndtering af gentagne henvendelser.
+Feltnavnene i ER-diagrammet er grundlag for den senere implementering. Begge relationer er én-til-mange. Ingen brugertabel eller junction-tabel er nødvendig i denne version.
 
 ## Adgang
 
-Appen læser ejendomsprojekter og medier. Kun JM/administration må ændre pladser. Henvendelser oprettes gennem en kontrolleret serverfunktion, som validerer input. Konkrete tabeller, adgangsregler og leveringsmekanisme skal implementeres af teamet.
+Appbrugere må læse ejendomsprojekter og medier og indsende interesse gennem en kontrolleret serverfunktion. De må ikke læse andre personers kontaktoplysninger eller ændre investorpladser. Kun JM/administration opdaterer pladser. Teamet fastlægger adgangsregler, opbevaring, sletning og håndtering af gentagne henvendelser ved implementering.

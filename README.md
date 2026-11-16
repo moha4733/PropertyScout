@@ -23,7 +23,8 @@ Dependencies er installeret, og Expos versionskontrol er bestået. Opstart på t
 
 - [Krav og projektbeskrivelse](docs/krav.md)
 - [Brugerflow](docs/brugerflow.md)
-- [Forslag til datamodel](docs/datamodel.md)
+- [Datamodel](docs/datamodel.md)
+- [ER-diagram](docs/er-diagram.md)
 - [Teknisk plan og dependencies](docs/teknisk-plan.md)
 - [Forslag til arkitektur](docs/arkitektur.md)
 
