@@ -28,7 +28,7 @@ Expo 58 er valgt af teamet. Kollegaens template er bevaret og suppleret med Supa
 
 1. Gennemgå krav, arkitektur og datamodel sammen.
 2. Kør `npm ci` og `npm start`, og kontrollér standardskærmen på jeres testtelefoner.
-3. Opsæt navigation og skærmstruktur. AGENTS.md foreskriver Expo Router; pakken og ruterne er endnu ikke opsat.
+3. Vælg og opsæt navigation og skærmstruktur. Et navigationsbibliotek er endnu ikke installeret.
 4. Opret et særskilt Supabase-projekt med tabeller og adgangsregler.
 5. Implementér kort og detaljer, derefter interesseformular og levering til JM.
 6. Afprøv forløbet på telefon, inklusive fejl og manuelt opdaterede pladser.

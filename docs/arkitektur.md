@@ -43,7 +43,7 @@ JM opdaterer optagede pladser i databasen → appen henter projektet igen → vi
 
 ## Beslutninger til teamet
 
-- AGENTS.md foreskriver Expo Router til navigation. Det er endnu ikke installeret eller konfigureret; teamet opsætter det ved kodestart.
+- Teamet vælger navigation ved kodestart. Expo Router er en mulighed, men er ikke installeret eller konfigureret.
 - Aftal genindlæsning eller realtidsopdatering af pladser.
 - Vælg kanal til JM og fastlæg, hvad kvitteringen betyder: gemt eller faktisk leveret.
 - Aftal behov for login; referenceprojektets anonyme login skal ikke automatisk blive et produktkrav.

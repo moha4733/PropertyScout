@@ -28,3 +28,11 @@ Dependencies er installeret, og Expos versionskontrol er bestået. Opstart på t
 - [Forslag til arkitektur](docs/arkitektur.md)
 
 Datamodel og arkitektur er forslag til teamets gennemgang før kodestart.
+
+## Licens
+
+Projektet er udgivet under [MIT-licensen](LICENSE). Den eksisterende copyright-notits fra Expo-templaten er bevaret.
+
+## Versionstags
+
+`v0.1.0` markerer projektets klargjorte grundopsætning, ikke en færdig app. Fremtidige versioner tagges som `vMAJOR.MINOR.PATCH`: patch til rettelser, minor til nye funktioner og major til inkompatible ændringer. Opret kun et tag, når den tilhørende commit er klar; eksisterende tags flyttes ikke.
