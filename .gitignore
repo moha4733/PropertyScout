@@ -1,0 +1,9 @@
+# Lokale miljøvariabler og hemmeligheder
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# Tilføj afhængigheder og buildmapper, når teknologien er valgt.
